@@ -21,8 +21,9 @@ public class RandomNumberGeneration implements SourceFunction<Tuple2<Integer, In
 			int first = counter+1;
 			int second = random.nextInt(BOUND/2-1)-1;
 			arg0.collect(Tuple2.of(first, second));
+			System.out.println("first : "+ first + " second : " +second);
 			counter++;
-			Thread.sleep(1000L);
+			Thread.sleep(5000L);
 		}
 
 	}
